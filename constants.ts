@@ -105,7 +105,7 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "AI & Tools",
-    skills: ["Vapi", "LangChain", "Git", "GitHub", "Postman", "SQL", "MySQL"]
+    skills: ["Vapi", "LangChain", "RAG", "MediaDevices", "Git", "GitHub", "Postman"]
   }
 ];
 
