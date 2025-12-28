@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { getDesignPath } from '../../utils/paths';
 
 export const PandaInteractiveDesign: React.FC = () => {
   useEffect(() => {
     // Load CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/designs/Panda-interactive/panda-interactive-login-form code/style.css';
+    link.href = getDesignPath('/designs/Panda-interactive/panda-interactive-login-form code/style.css');
     link.id = 'panda-interactive-style';
     if (!document.getElementById('panda-interactive-style')) {
       document.head.appendChild(link);
@@ -33,7 +34,7 @@ export const PandaInteractiveDesign: React.FC = () => {
     jquery.id = 'jquery-script';
     
     const script = document.createElement('script');
-    script.src = '/designs/Panda-interactive/panda-interactive-login-form code/script.js';
+    script.src = getDesignPath('/designs/Panda-interactive/panda-interactive-login-form code/script.js');
     script.id = 'panda-interactive-script';
 
     if (!document.getElementById('jquery-script')) {

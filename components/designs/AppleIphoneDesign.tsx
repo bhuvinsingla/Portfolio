@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { getDesignPath } from '../../utils/paths';
 
 export const AppleIphoneDesign: React.FC = () => {
   useEffect(() => {
     // Import and apply the CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/designs/Apple-iphone/style.css';
+    link.href = getDesignPath('/designs/Apple-iphone/style.css');
     link.id = 'apple-iphone-style';
     
     // Check if already added
@@ -40,9 +41,9 @@ export const AppleIphoneDesign: React.FC = () => {
     }}>
       <div className="card">
         <div className="circle">
-          <img src="/designs/Apple-iphone/logo.png" alt="Logo" className="logo" />
+          <img src={getDesignPath('/designs/Apple-iphone/logo.png')} alt="Logo" className="logo" />
         </div>
-        <img src="/designs/Apple-iphone/iphone.png" alt="iPhone" className="product_img" />
+        <img src={getDesignPath('/designs/Apple-iphone/iphone.png')} alt="iPhone" className="product_img" />
         <div className="content">
           <h2>iPhone</h2>
           <p>

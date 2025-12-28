@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Section } from './Section';
 import { ExternalLink, X } from 'lucide-react';
+import { getDesignPath } from '../utils/paths';
 import { AppleIphoneDesign } from './designs/AppleIphoneDesign';
 import { NeonDragonDesign } from './designs/NeonDragonDesign';
 import { AnimatedBagLoginDesign } from './designs/AnimatedBagLoginDesign';
@@ -125,7 +126,7 @@ export const Designs: React.FC = () => {
         container.innerHTML = '';
 
         const iframe = document.createElement('iframe');
-        iframe.src = `${designData.basePath}/index.html`;
+        iframe.src = getDesignPath(`${designData.basePath}/index.html`);
         iframe.style.width = '100%';
         iframe.style.height = '100%';
         iframe.style.border = 'none';

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { getDesignPath } from '../../utils/paths';
 
 export const NeonDragonDesign: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -7,7 +8,7 @@ export const NeonDragonDesign: React.FC = () => {
     // Load CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/designs/Interactive-Neon-Dragon-Code/style.css';
+    link.href = getDesignPath('/designs/Interactive-Neon-Dragon-Code/style.css');
     link.id = 'neon-dragon-style';
     if (!document.getElementById('neon-dragon-style')) {
       document.head.appendChild(link);
@@ -15,7 +16,7 @@ export const NeonDragonDesign: React.FC = () => {
 
     // Load and execute the script
     const script = document.createElement('script');
-    script.src = '/designs/Interactive-Neon-Dragon-Code/script.js';
+    script.src = getDesignPath('/designs/Interactive-Neon-Dragon-Code/script.js');
     script.id = 'neon-dragon-script';
     
     if (!document.getElementById('neon-dragon-script')) {

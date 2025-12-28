@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { getDesignPath } from '../../utils/paths';
 
 export const NetflixIntroDesign: React.FC = () => {
   useEffect(() => {
     // Load CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/designs/Netflix-Intro/style.css';
+    link.href = getDesignPath('/designs/Netflix-Intro/style.css');
     link.id = 'netflix-intro-style';
     if (!document.getElementById('netflix-intro-style')) {
       document.head.appendChild(link);

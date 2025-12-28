@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
+import { getDesignPath } from '../../utils/paths';
 
 export const LegendLoginDesign: React.FC = () => {
   useEffect(() => {
     // Load CSS
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = '/designs/legend_login_form/style.css';
+    link.href = getDesignPath('/designs/legend_login_form/style.css');
     link.id = 'legend-login-style';
     if (!document.getElementById('legend-login-style')) {
       document.head.appendChild(link);
@@ -21,7 +22,7 @@ export const LegendLoginDesign: React.FC = () => {
 
     // Load script
     const script = document.createElement('script');
-    script.src = '/designs/legend_login_form/script.js';
+    script.src = getDesignPath('/designs/legend_login_form/script.js');
     script.id = 'legend-login-script';
     if (!document.getElementById('legend-login-script')) {
       document.body.appendChild(script);
@@ -38,7 +39,7 @@ export const LegendLoginDesign: React.FC = () => {
   return (
     <div 
       style={{
-        background: 'url(/designs/legend_login_form/background.jpg)',
+        background: `url(${getDesignPath('/designs/legend_login_form/background.jpg')})`,
         minHeight: '100vh',
         minWidth: '450px',
         display: 'flex',
